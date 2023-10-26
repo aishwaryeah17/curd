@@ -16,13 +16,13 @@ jobs:
         mvn -B package --file pom.xml
         sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
 
-  #backenddeploy:
-   #  needs: mavenbuild
-   #  runs-on: self-hosted
+  # backenddeploy:
+  #   needs: mavenbuild
+  #   runs-on: self-hosted
 
-    # steps:
-     #- name: war file
-      # run: sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
+  #   steps:
+  #    - name: war file
+  #       run: sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
       
   reactBuild:
       runs-on: self-hosted
@@ -56,15 +56,3 @@ jobs:
     # - name: Deploy or other actions
       # You can add additional steps here, like deploying to a server or publishing to npm
 
-  #     - name: Snyk
-  # # You may pin to the exact commit or the version.
-  # # uses: snyk/actions@b98d498629f1c368650224d6d212bf7dfa89e4bf
-  # uses: snyk/actions@0.4.0
-  # with:
-  #   # Which Snyk command to run, defaults to test
-  #   command: # optional, default is test
-  #   # Additional arguments to pass to Snyk
-  #   args: # optional
-  #   # Output a snyk.json file with results if running the test command
-  #   json: # optional
-     
