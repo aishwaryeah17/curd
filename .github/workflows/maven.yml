@@ -38,14 +38,15 @@ jobs:
             cd frontend/react-frontend
             npm install
              CI='' npm run build
+             sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
             #npm run build
-  frontenddeploy:
-     needs: reactBuild
-     runs-on: self-hosted
+  # frontenddeploy:
+  #    needs: reactBuild
+  #    runs-on: self-hosted
 
-     steps:
-       - name: deploying build folder
-         run:  sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
+  #    steps:
+  #      - name: deploying build folder
+  #        run:  sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
     
     # - name: Upload artifacts
      #  uses: actions/upload-artifact@v2
