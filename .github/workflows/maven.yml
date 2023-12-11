@@ -35,7 +35,6 @@ jobs:
   # frontenddeploy:
   #    needs: reactBuild
   #    runs-on: self-hosted
-
   #    steps:
   #      - name: deploying build folder
   #        run:  sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
